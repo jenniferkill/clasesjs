@@ -1,7 +1,9 @@
-let nombre  =  prompt("Cual es el nombre de tu mascota: ")
-let raza = prompt("Cual es la raza  de tu mascota: ")
-let edad1 = Number(prompt("cuantos años tiene tu mascota: "))
-let edad2= Number(prompt("cual es tu edad: "))
-let suma = edad1 + edad2
-alert ("el nombre y raza son:  " + nombre + " " + raza )
-alert ("tu edad mas la de tu mascosta :"  + suma)
+let edad = parseInt(prompt("ingrese la edad: "))
+
+if( edad <= 17){
+    alert ("eres menor de edad en argentina");
+}else if(edad  >=  18  && edad <= 21){
+    alert("eres menor de edad en estados unidos");
+}else{
+    alert("eres mayor de edad en el mundo");
+}
