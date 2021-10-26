@@ -65,9 +65,48 @@ for(let i =0; i< 3; i++){
 }
 console.log(aula)
 */
+/*
 let numero= parseInt(prompt("ingrese un numero de 1 a 9"));
 let primeros = []
+
 for(let i = 1; i < 10; i++){
     primeros[i]=numero * i
 }
 console.log(`estos ${primeros} es la tabla de multiplicar de ${numero}`)
+
+function tablamul(param){
+
+    for(let i = 0; i < 11; i++){
+        primeros[i]=param * i
+    } 
+    console.log(`estos ${primeros} es la tabla de multiplicar de ${param}`)
+}
+
+tablamul(numero)
+tablamul(num2)*/
+
+let cantidad = parseInt(prompt("ingrese cantidad de materias: ")) 
+let materias = []
+let suma = 0
+
+function calculoPromedio(cantidad,materias,suma){
+    for (let i = 0; i < cantidad; i++){
+        materias[i] = parseInt(prompt(`ingrese la nota de la materia  ${i+1} :`))
+    }
+
+    for (let i= 0; i < materias.length; i++){
+        suma= materias[i] + suma
+    }
+return(suma / cantidad)
+}
+
+let promedio = calculoPromedio(cantidad,materias,suma)
+let redondeo = promedio.toFixed(1)
+if (promedio <= 4){
+    alert(`el promedio de tus notas es ${redondeo} y tus notas son muy bajas`)
+}else if (promedio >= 5 && promedio <= 8){
+    alert(`el promedio de tus notas es ${redondeo} y tus notas van bien pero no eres el mejor`)
+}else {
+    alert(`el promedio de tus notas es ${redondeo} y tus notas son perfectas`)
+}
+
