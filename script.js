@@ -84,7 +84,7 @@ function tablamul(param){
 
 tablamul(numero)
 tablamul(num2)*/
-
+/*
 let cantidad = parseInt(prompt("ingrese cantidad de materias: ")) 
 let materias = []
 let suma = 0
@@ -109,4 +109,36 @@ if (promedio <= 4){
 }else {
     alert(`el promedio de tus notas es ${redondeo} y tus notas son perfectas`)
 }
+*/
 
+//objeto para el proyecto integrador 
+class datos{
+    constructor(nombre,apellido,telefono,email,piel,afeccion,tratamiento,fecha){
+        this.nombre = nombre
+        this.apellido = apellido
+        this.telefon = telefono
+        this.email = email
+        this.piel = piel
+        this.afeccion = afeccion
+        this.tratamiento = tratamiento
+        this.fecha = fecha
+    }
+    verificacion(){
+        alert(`hola ${nombre} ${apellido} con el numero de telefono ${telefono} y el email ${email} nos contactaremos`)
+    }
+}
+
+const nombre = prompt(`ingresa tu nombre:`)
+const apellido = prompt(`ingresa tu apellido:`)
+const telefono = parseInt(prompt(`ingresa tu telefono:`))
+const email = prompt(`ingresa tu email:`)
+const piel = prompt(`ingresa tu tipo de piel:`)
+const afeccion= prompt(`tienes alguna condiccion especial en la piel`)
+const tratamiento= prompt(`que tipo de tratamiento buscas`)
+const fecha = prompt(`selecciona una fecha`)
+
+
+
+
+let persona1 = new datos(nombre,apellido,telefono,email,piel,afeccion,tratamiento,fecha)
+persona1.verificacion();
