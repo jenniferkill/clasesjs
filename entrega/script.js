@@ -112,21 +112,7 @@ if (promedio <= 4){
 */
 
 //objeto para el proyecto integrador 
-class datos{
-    constructor(nombre,apellido,telefono,email,piel,afeccion,tratamiento,fecha){
-        this.nombre = nombre
-        this.apellido = apellido
-        this.telefon = telefono
-        this.email = email
-        this.piel = piel
-        this.afeccion = afeccion
-        this.tratamiento = tratamiento
-        this.fecha = fecha
-    }
-    verificacion(){
-        alert(`hola ${nombre} ${apellido} con el numero de telefono ${telefono} y el email ${email} nos contactaremos`)
-    }
-}
+/*
 
 const nombre = prompt(`ingresa tu nombre:`)
 const apellido = prompt(`ingresa tu apellido:`)
@@ -142,3 +128,29 @@ const fecha = prompt(`selecciona una fecha`)
 
 let persona1 = new datos(nombre,apellido,telefono,email,piel,afeccion,tratamiento,fecha)
 persona1.verificacion();
+
+*/
+let profesionales =[]
+let turnos = []
+let clientes = [] 
+
+profesionales.push ( new profesional(123324980,"martin",123456, "facial", "impar", "mañana"))
+profesionales.push(new profesional(123564980,"ester",123456, "corporal", "impar", "mañana"))
+profesionales.push( new profesional(56724980,"marta", 123456, "manos", "par", "tarde"))
+
+turnos.push (new turno(1768324980, 10, "lifting",123324980,"lunes"))
+turnos.push (new turno(18924980, 10,  "drenaje",123564980,"miercoles"))
+turnos.push (new turno(18924980,13 , "decoracion",56724980,"martes"))
+
+clientes.push (new cliente(1768324980,"monica", "frand", 190239485, "heori@akdjhfj.com",))
+clientes.push (new cliente(18924980,"roxana", "martinez", 190233234, "trbhdgf@akdjhfj.com",))
+clientes.push (new cliente(78124980,"paloma", "ortiz", 1902789, "paloma.ort@akdjhfj.com",))
+
+console.log (profesionales.length);
+console.log (turnos)
+
+
+
+
+
+

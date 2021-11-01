@@ -1,20 +1,24 @@
-let prestamo = parseInt(prompt("ingrese el monto del prestamo:"));
-let iva1 =parseInt(prompt("ingrese el porcentaje de interes por años: "));
-let alos =parseInt(prompt("ingrese la cantidad de años: "));
-const interes = 3
-let meses =alos * 12
 
-let intAnual = (alos,interes,iva1) => (interes + iva1)*alos
-let intDinero = (prestamo,intAnual) => (prestamo * intAnual)/100
-let pagoTotal = (intDinero,prestamo) => intDinero+prestamo
-let pagoMes = (pagoTotal, meses) => pagoTotal/meses
+class producto{
+    constructor(fruta, precio, productor){
+        this.fruta = fruta;
+        this.precio= precio;
+        this.productor = productor;
+       
+    }
+}
 
-let porcenAnual = intAnual(alos,interes,iva1)
-let intereses = intDinero(prestamo,porcenAnual)
-let total = pagoTotal(intereses,prestamo)
-let mes = pagoMes(total,meses)
+let productos =[]
 
-alert (`vas a pagar por ${meses} meses ${mes} y al terminar los ${alos} años vas a pagar ${total} `);
+productos.push (new producto("tomate", 100,"sweden"))
+productos.push (new producto("frutilla", 150,"francia"))
+productos.push (new producto("sandia", 300,"sweden"))
+productos.push (new producto("melon", 50,"london"))
+productos.push (new producto("banana", 80,"colombia"))
 
+//console.log(productos)
 
-
+productos.sort(function(a,b){
+    return a.precio - b.precio
+})
+console.table(productos)
