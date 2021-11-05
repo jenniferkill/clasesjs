@@ -146,8 +146,15 @@ clientes.push (new cliente(1768324980,"monica", "frand", 190239485, "heori@akdjh
 clientes.push (new cliente(18924980,"roxana", "martinez", 190233234, "trbhdgf@akdjhfj.com",))
 clientes.push (new cliente(78124980,"paloma", "ortiz", 1902789, "paloma.ort@akdjhfj.com",))
 
-console.log (profesionales.length);
-console.log (turnos)
+function consultarNombre(array){
+    for ( obj of array){
+        let nombre  = obj.nombre
+        console.log(nombre)
+    }
+
+}
+console.log(clientes)
+consultarNombre(clientes)
 
 
 

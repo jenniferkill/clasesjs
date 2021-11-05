@@ -1,5 +1,5 @@
 // altas 
-class profesional {
+class Profesional {
     constructor (dni,nombre,telefono,email,dias,horarios){
         this.dni = dni;
         this.nombre = nombre;
@@ -17,7 +17,7 @@ class profesional {
         }
     }
 }
-class turno{
+class Turno{
     constructor(dniCliente, horario, tratamiento, dniprofesional,dia){
         this.dniCliente = dniCliente;
         this.horario = horario;
@@ -29,7 +29,7 @@ class turno{
         console.log(`tu turno quedo asignado para el ${this.dia} con el profesional ${this.dniprofesional} en el horario ${this.horario}`)
     }
 }
-class cliente {
+class Cliente {
     constructor(dni,nombre,apellido,telefono,email){
         this.dni = dni;
         this.nombre = nombre;

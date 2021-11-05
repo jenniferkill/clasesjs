@@ -34,10 +34,19 @@ function ingresoTurno(){
     const dia = prompt(`ingresa ingresa el dia:`)
     turnos.push(new turno(dni,horario,tratamiento,profesional,dia))
 }
+function consultarNombre(array){
+    for (obj of array){
+        let nombre  = obj.nombre
+        console.log(nombre)
+    }
+
+}
 
 ingresoCliente()
 ingresoProfesional ()
 ingresoTurno()
+consultarNombre(profesionales)
+
 console.log (profesionales)
 console.log (clientes)
 console.log(turnos)
