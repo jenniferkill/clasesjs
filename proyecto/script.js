@@ -10,7 +10,7 @@ function ingresoCliente (){
     const telefono = parseInt(prompt(`ingresa tu telefono: `))
     const email = prompt(`ingresa tu email:`)
    
-    clientes.push(new cliente(dni,nombre,apellido,telefono,email))
+    clientes.push(new Cliente(dni,nombre,apellido,telefono,email))
 }
 
 function ingresoProfesional (){
@@ -22,7 +22,7 @@ function ingresoProfesional (){
     const dias = prompt(`ingresa par o impar (Par: martes, jueves, sabado  Impar: lunes, miercoles, viernes): `)
     const horarios = prompt(`ingrese el horario disponible (Mañana o Tarde): `)
 
-    profesionales.push(new profesional(dni,nombre,telefono,email,dias,horarios))
+    profesionales.push(new Profesional(dni,nombre,telefono,email,dias,horarios))
 }
 
 function ingresoTurno(){
@@ -32,7 +32,7 @@ function ingresoTurno(){
     const tratamiento = prompt(`ingresa el tratamiento: `)
     const profesional = parseInt(prompt(`ingresa el nombre del profesional: `))
     const dia = prompt(`ingresa ingresa el dia:`)
-    turnos.push(new turno(dni,horario,tratamiento,profesional,dia))
+    turnos.push(new Turno(dni,horario,tratamiento,profesional,dia))
 }
 function consultarNombre(array){
     for (obj of array){
