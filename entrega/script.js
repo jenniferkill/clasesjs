@@ -130,31 +130,73 @@ let persona1 = new datos(nombre,apellido,telefono,email,piel,afeccion,tratamient
 persona1.verificacion();
 
 */
-let profesionales =[]
-let turnos = []
-let clientes = [] 
-
-profesionales.push ( new profesional(123324980,"martin",123456, "facial", "impar", "mañana"))
-profesionales.push(new profesional(123564980,"ester",123456, "corporal", "impar", "mañana"))
-profesionales.push( new profesional(56724980,"marta", 123456, "manos", "par", "tarde"))
-
-turnos.push (new turno(1768324980, 10, "lifting",123324980,"lunes"))
-turnos.push (new turno(18924980, 10,  "drenaje",123564980,"miercoles"))
-turnos.push (new turno(18924980,13 , "decoracion",56724980,"martes"))
-
-clientes.push (new cliente(1768324980,"monica", "frand", 190239485, "heori@akdjhfj.com",))
-clientes.push (new cliente(18924980,"roxana", "martinez", 190233234, "trbhdgf@akdjhfj.com",))
-clientes.push (new cliente(78124980,"paloma", "ortiz", 1902789, "paloma.ort@akdjhfj.com",))
-
-function consultarNombre(array){
-    for ( obj of array){
-        let nombre  = obj.nombre
-        console.log(nombre)
+//objetos
+class Profesional {
+    constructor (dni,nombre){
+        this.dni = dni;
+        this.nombre = nombre;
+        
     }
-
 }
-console.log(clientes)
-consultarNombre(clientes)
+class Cliente {
+    constructor(dni,nombre){
+        this.dni = dni;
+        this.nombre = nombre;
+    }
+} 
+// arrays
+let profesionales =[]
+let clientes = []
+
+function ingresoCliente (){
+
+    const dni = prompt(`Cliente nuevo ingresa tu DNI: `)
+    const nombre = prompt(`Cliente nuevo ingresa tu nombre: `)
+    
+   
+    clientes.push(new Cliente(dni,nombre))
+}
+
+function ingresoProfesional (){
+
+    const dni = prompt(`Profesional nuevo ingresa tu DNI: `)
+    const nombre = prompt(`Profesional nuevo ingresa tu nombre completo: `)
+    
+
+    profesionales.push(new Profesional(dni,nombre))
+}
+
+//funciones para crear el array
+for (let i= 0; i<=2; i++){
+    ingresoProfesional()
+}
+
+for (let i= 0; i<=2; i++){
+    ingresoCliente()
+}
+
+//ingreso de html 
+let altaClientes = document.getElementById("altaClientes")
+
+
+clientes.forEach(cliente =>{
+    altaClientes.innerHTML += `
+    <div id ="cliente${cliente.id}">
+    <p> DNI del Cliente: ${cliente.dni} </p>
+    <p> Nombre del Cliente: ${cliente.nombre} </p>
+`
+})
+
+let altaProfesionales = document.getElementById("altaProfesionales")
+
+profesionales.forEach(profesional =>{
+    altaProfesionales.innerHTML += `
+    <div id ="profesional${profesional.id}">
+    <p> DNI del Profesional: ${profesional.dni} </p>
+    <p> Nombre del Profesional: ${profesional.nombre} </p>
+`
+})
+
 
 
 
