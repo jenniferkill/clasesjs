@@ -1,0 +1,18 @@
+
+*{
+    background-color: burlywood;
+    color: rgb(87, 24, 87);
+    font-family:"Architects Daughter";
+}
+.formulario{
+    background-color: wheat;
+    border: rgb(87, 24, 87) solid 2px ;
+    text-align: center;
+}
+.titulo{
+    font-size: 20px;
+    margin: 5px;
+}
+table{   
+    font-size: 30px;
+}

@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>entrega</title>
 </head>
 <body>
+    <h1>Formulario para registro de Clientes </h1>
+    <div class="formulario">
+    <form id="cliente">
+        <label class="titulo" for="Name">Dni:</label>
+        <input type="number" name="dni" placeholder="Dni"><br>
+        <label class="titulo" for="Name">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Tu nombre"><br>
+        <label class="titulo" for="Name">Apellido:</label>
+        <input type="text" name="apellido" placeholder="Tu Apellido"><br>
+        <label class="titulo" for="Name">Telefono:</label>
+        <input type="number" name="telefono" placeholder="Telefono"><br>
+        <label class="titulo" for="Email">Email:</label>
+        <input class="ingreso" type="email" name="email" placeholder="a@a.com"><br>
+        <button type="submit">Enviar</button>
+    </form>  
+    </div>
     <div id="altaClientes">
+        
     </div>
-    <div id="altaProfesionales">
-    </div>
-   
     <script src="script.js"></script>
-
 </body>
 </html>

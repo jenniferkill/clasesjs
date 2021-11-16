@@ -129,7 +129,7 @@ const fecha = prompt(`selecciona una fecha`)
 let persona1 = new datos(nombre,apellido,telefono,email,piel,afeccion,tratamiento,fecha)
 persona1.verificacion();
 
-*/
+
 //objetos
 class Profesional {
     constructor (dni,nombre){
@@ -196,10 +196,64 @@ profesionales.forEach(profesional =>{
     <p> Nombre del Profesional: ${profesional.nombre} </p>
 `
 })
+let clientes = []
+*/
+
+/*
+function ingresoCliente (){
+
+  
+    
+   
+    clientes.push(new Cliente(dni,nombre))
+}
+clientes.forEach(cliente =>{
+    altaClientes.innerHTML += `
+    <div id ="cliente${cliente.id}">
+    <p> DNI del Cliente: ${cliente.dni} </p>
+    <p> Nombre del Cliente: ${cliente.nombre} </p>
+`
+})
+
+for (let i= 0; i<=2; i++){
+    ingresoCliente()
+}*/
+class Cliente {
+    constructor(id,dni,nombre,apellido,telefono,email){
+        this.id =id;
+        this.dni = dni;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.email = email;
+    }
+}
+let id = 1;
+let clientes = []
+let formCliente = document.getElementById("cliente")
+let altaClientes = document.getElementById("altaClientes")
 
 
+function clear() {
+    document.getElementById("cliente").reset();
+  }
+formCliente.addEventListener("submit",(e) => {
+    e.preventDefault()
+    let datosCliente = new FormData(e.target)
+    let cliente = new Cliente(id,datosCliente.get("dni"),datosCliente.get("nombre"),datosCliente.get("apellido"),datosCliente.get("telefono"),datosCliente.get("email"))
+    id++
+    clientes.push(cliente)
+    //no lo sume 
+    altaClientes.innerHTML =""
+    clear(formCliente)
+    clientes.forEach(cliente =>{
 
+        altaClientes.innerHTML += `
+        <div ${cliente.id}">
+        <p> finalizaste tu suscripcion como cliente con Dni ${cliente.dni} y tu nombre ${cliente.nombre} ${cliente.apellido} telefono ${cliente.telefono} y tu email ${cliente.email}</p>
+        
 
-
-
+    `
+    })
+} )
 

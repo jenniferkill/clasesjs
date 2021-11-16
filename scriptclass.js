@@ -31,7 +31,7 @@ parrafos2.innerHTML += `
     <p id="parrafos${5}" class="claseParrafo${5}">hola Gente</p>
 `
 */
-class Producto {
+/*class Producto {
     constructor(id, nombre, precio, stock){
         this.id =id;
         this.nombre = nombre;
@@ -68,3 +68,51 @@ productos.forEach(producto =>{
         
     `
 })
+let datos = []
+let boton = document.getElementById("boton1")
+let div = document.getElementById("div1")
+
+boton.addEventListener("click",()=>{
+    let pancrasio = document.getElementById("pepito")
+    //agregue la informacion a la pagina de html
+    div.innerHTML += `<p> ${pancrasio.value} </p>`
+    //guarde en el array
+    datos.push(pancrasio.value)
+    //setear para que el campo quede en blanco
+    pancrasio.value = ""
+    console.log(datos)
+})
+
+class Persona{
+    constructor(id, nombre, edad, peso, altura){
+        this.id =id;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.peso = peso;
+        this.altura = altura; 
+    }
+}
+
+let id = 1;
+let personas = []
+let formPersona = document.getElementById("formPersona")
+
+formPersona.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let formDatos =new FormData(e.target)
+    console.log(e.target)
+    console.log(formDatos.get("nombre"))
+    console.log(formDatos.get("edad"))
+    console.log(formDatos.get("peso"))
+    console.log(formDatos.get("altura"))
+    //formas de mostrar los resultados 
+    let persona = new Persona(id, formDatos.get("nombre"), formDatos("edad"), formDatos("peso"), formDatos("altura"))
+    id++
+    console.log(persona)
+    personas.push(persona)
+})
+document.getElementById("input1").addEventListener("change", () =>{
+    let parrafo1 = document.getElementById("parrafo1")
+    parrafo1.innerText = "holacoders!"
+})
+*/
